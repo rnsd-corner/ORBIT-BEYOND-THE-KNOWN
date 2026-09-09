@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-void: #07090D;
+  --color-void-dark: #040507;
+  --color-slate-dark: #0B0F17;
+  --color-mist: #ECEFF4;
+  --color-amber-glow: #E5A967;
+  --color-cyan-ice: #7DD3FC;
+  --color-subtle-gray: #8C95A6;
+  --color-hairline: rgba(255, 255, 255, 0.08);
+
+  --letter-spacing-ultra: 0.28em;
+  --letter-spacing-mega: 0.35em;
+}
+
+@layer base {
+  body {
+    background-color: #07090D;
+    color: #ECEFF4;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(1px 1px at 23px 45px, rgba(255, 255, 255, 0.18), transparent),
+      radial-gradient(1.5px 1.5px at 145px 230px, rgba(125, 211, 252, 0.14), transparent),
+      radial-gradient(1px 1px at 320px 110px, rgba(229, 169, 103, 0.15), transparent),
+      radial-gradient(1px 1px at 480px 390px, rgba(255, 255, 255, 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 550px 550px;
+  }
+}
+
+/* Custom Editorial & Technical Utilities */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-sans-geo {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.hairline-b {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-r {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-l {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-all {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Telemetry reticle corners */
+.reticle-box {
+  position: relative;
+}
+.reticle-box::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid rgba(229, 169, 103, 0.7);
+  border-left: 1.5px solid rgba(229, 169, 103, 0.7);
+  pointer-events: none;
+  z-index: 20;
+}
+.reticle-box::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1.5px solid rgba(125, 211, 252, 0.7);
+  border-right: 1.5px solid rgba(125, 211, 252, 0.7);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Vignette overlays */
+.hero-vignette {
+  background: linear-gradient(180deg, rgba(7,9,13,0.4) 0%, rgba(7,9,13,0.1) 40%, rgba(7,9,13,0.85) 85%, #07090D 100%);
+}
+
+.cinema-vignette {
+  background: radial-gradient(circle at center, transparent 40%, rgba(7, 9, 13, 0.85) 100%);
+}

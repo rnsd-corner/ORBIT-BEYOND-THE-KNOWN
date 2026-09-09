@@ -1,0 +1,6 @@
+{
+  "name": "ORBIT — Beyond The Known",
+  "description": "ORBIT is an exploration consortium documenting deep space missions, celestial worlds, spacecraft architecture, and scientific discoveries beyond the known.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
